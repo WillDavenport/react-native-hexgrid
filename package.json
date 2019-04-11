@@ -2,7 +2,7 @@
   "name": "react-hexgrid",
   "description": "Interactive hexagon grids with React bindings",
   "version": "1.0.3",
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "author": "Hellenic",
   "repository": "Hellenic/react-hexgrid",
   "license": "MIT",
@@ -34,6 +34,7 @@
     "react-native-svg": "^9.3.7"
   },
   "files": [
+    "src/",
     "lib/",
     "dist/"
   ]
