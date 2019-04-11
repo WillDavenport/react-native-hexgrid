@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Defs, Pattern as SVGPattern, Image } from 'react-native-svg';
+import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 import HexUtils from './HexUtils';
 import Point from './models/Point';
@@ -18,11 +18,11 @@ class Pattern extends Component {
     const { id, link, size } = this.props;
 
     return (
-      <Defs>
-        <SVGPattern id={id} patternUnits="objectBoundingBox" x={0} y={0} width={size.x} height={size.y}>
-          <Image xlinkHref={link} x={0} y={0} width={size.x*2} height={size.y*2} />
-        </SVGPattern>
-      </Defs>
+      <Svg.Defs>
+        <Svg.Pattern id={id} patternUnits="objectBoundingBox" x={0} y={0} width={size.x} height={size.y}>
+          <Svg.Image xlinkHref={link} x={0} y={0} width={size.x*2} height={size.y*2} />
+        </Svg.Pattern>
+      </Svg.Defs>
     );
   }
 }

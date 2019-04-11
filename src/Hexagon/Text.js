@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Svg } from 'expo';
 
 // TODO Text is a separate component so that it could wrap the given text inside the surrounding hexagon
 class Text extends Component {
@@ -19,7 +20,7 @@ class Text extends Component {
   render() {
     const { children, x, y, className } = this.props;
     return (
-      <text x={x || 0} y={y ? y : '0.3em'} className={className} textAnchor="middle">{children}</text>
+      <Svg.Text x={x || 0} y={y ? y : '0.3em'} className={className} textAnchor="middle">{children}</Svg.Text>
     );
   }
 }

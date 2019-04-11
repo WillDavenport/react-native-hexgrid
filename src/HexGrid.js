@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Svg from 'react-native-svg';
+import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 
 class HexGrid extends Component {

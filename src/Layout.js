@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { G } from 'react-native-svg';
+import { Svg } from 'expo';
 import Orientation from './models/Orientation';
 import Point from './models/Point';
 
@@ -65,9 +65,9 @@ class Layout extends Component {
   render() {
     const { children, className } = this.props;
     return (
-      <G className={className}>
+      <Svg.G className={className}>
         {children}
-      </G>
+      </Svg.G>
     );
   }
 }

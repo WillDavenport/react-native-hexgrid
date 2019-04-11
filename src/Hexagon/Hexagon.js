@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { G } from 'react-native-svg';
+import { Svg } from 'expo';
 import Hex from '../models/Hex';
 import HexUtils from '../HexUtils';
 
@@ -49,15 +49,15 @@ class Hexagon extends Component {
     const { pixel } = this.state;
     const fillId = (fill) ? `url(#${fill})` : null;
     return (
-      <G
+      <Svg.G
         className={classNames('hexagon-group', className)}
         transform={`translate(${pixel.x}, ${pixel.y})`}
       >
-        <G className="hexagon">
+        <Svg.G className="hexagon">
           <polygon points={points} fill={fillId} style={cellStyle} />
           {this.props.children}
-        </G>
-      </G>
+        </Svg.G>
+      </Svg.G>
     );
   }
 }

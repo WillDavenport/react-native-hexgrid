@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Path as SVGPath } from 'react-native-svg';
+import { Svg } from 'expo';
 import PropTypes from 'prop-types';
 import HexUtils from './HexUtils';
 
@@ -41,7 +41,7 @@ class Path extends Component {
 
   render() {
     return (
-      <SVGPath d={this.getPoints()} />
+      <Svg.Path d={this.getPoints()} />
     );
   }
 }
