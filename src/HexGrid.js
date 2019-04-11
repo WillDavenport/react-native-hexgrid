@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Svg from 'react-native-svg';
 import PropTypes from 'prop-types';
 
 class HexGrid extends Component {
@@ -24,9 +25,9 @@ class HexGrid extends Component {
   render() {
     const { width, height, viewBox } = this.props
     return (
-      <svg className="grid" width={width} height={height} viewBox={viewBox} version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <Svg className="grid" width={width} height={height} viewBox={viewBox}>
         {this.props.children}
-      </svg>
+      </Svg>
     );
   }
 }

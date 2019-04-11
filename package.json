@@ -30,7 +30,8 @@
     "react-test-renderer": "^15.5.4"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "react-native-svg": "^9.3.7"
   },
   "files": [
     "lib/",
