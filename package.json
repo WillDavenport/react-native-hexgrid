@@ -1,10 +1,10 @@
 {
-  "name": "react-hexgrid",
+  "name": "react-native-hexgrid",
   "description": "Interactive hexagon grids with React bindings",
   "version": "1.0.3",
   "main": "src/index.js",
   "author": "Hellenic",
-  "repository": "Hellenic/react-hexgrid",
+  "repository": "superteam-io/react-native-hexgrid",
   "license": "MIT",
   "scripts": {
     "compile": "babel src/ --out-dir lib",
