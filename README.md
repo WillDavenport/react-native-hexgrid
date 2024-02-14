@@ -1,27 +1,34 @@
 # react-hexgrid
 
-[![build status](https://img.shields.io/travis/Hellenic/react-hexgrid/master.svg?style=flat-square)](https://travis-ci.org/Hellenic/react-hexgrid)
 ![Downloads](https://img.shields.io/npm/dt/react-hexgrid.svg)
 ![npm version](https://img.shields.io/npm/v/react-hexgrid.svg)
-[![dependencies Status](https://david-dm.org/Hellenic/react-hexgrid/status.svg)](https://david-dm.org/Hellenic/react-hexgrid)
-[![devDependencies Status](https://david-dm.org/Hellenic/react-hexgrid/dev-status.svg)](https://david-dm.org/Hellenic/react-hexgrid?type=dev)
-[![Live demo](https://img.shields.io/badge/live-demo-brightgreen.svg?style=flat-square)](http://karkk.ai//nen/react-hexgrid/examples/)
+![dependencies Status](https://img.shields.io/librariesio/github/hellenic/react-hexgrid)
+[![Live demo](https://img.shields.io/badge/live-demo-brightgreen.svg?style=flat-square)](https://hellenic.github.io/react-hexgrid/examples/)
 ![License](https://img.shields.io/npm/l/react-hexgrid.svg)
 
-React components to build interactive hexagons grids. It uses SVG which makes it fast, scalable and easy to apply custom styles. You can easily customize the layout of the grid just by configuration.
+React components to build interactive hexagon grids. This library uses SVG and allows you to create fully customizable and scalable interactive hexagon grids with a simple api.
 
-Component-based approach allows you to customize the grid shape to suit your needs or even apply your own components / SVG elements to it. You can use pre-defined generator to create certain shape grid or you may build totally your own grid to the shape you wish, while still keeping it under control and interactive.
+The component based approach allows you to customize the grid shape to suit your needs or even apply your own components or SVG elements to it. You can use the pre-defined generator to create certain grid shapes or you may build your own grid as you wish, while still keeping it under control and interactive.
 
-You could easily use this library to build (just to name a few) a nice portfolio, image library or even a game!
+You could easily use this library to build a nice portfolio, image library or even a game (just to name a few)! [![youtube video about hexagons](Hexagons are the bestagons)](https://www.youtube.com/watch?v=thOifuHs6eY), enjoy!
 
 > With inspiration from
-[http://www.redblobgames.com/grids/hexagons](http://www.redblobgames.com/grids/hexagons).
+> [http://www.redblobgames.com/grids/hexagons](http://www.redblobgames.com/grids/hexagons).
 
-## Pre-requisites
+> 🖊️ Codepen to play around with: https://codepen.io/hellenic/project/editor/AYMbMM#
 
-You should be familiar with Node + NPM, React and ES6 to use this library.
-Library also depends heavily on HTML5 features (mostly SVG) which all might not be supported by every browser yet.
-For example [Drag & Drop](http://caniuse.com/#search=drag%20and) is still quite heavily under work.
+> Discord server: https://discord.gg/TxNb6EZZZE
+
+## Upcoming Version 2
+
+The new version should not contain any breaking changes. There is typescript support, some storybook examples for easy development and testing. The new version uses the newer react context api under the hood.
+Though there should not be any breaking changes, there could be issues. Feel free to checkout the current beta release and give feedback.
+
+Install via:
+
+```
+npm install react-hexgrid@beta
+```
 
 ## Getting Started
 
@@ -33,6 +40,11 @@ npm install --save react-hexgrid
 
 More documentation in the [Wiki](https://github.com/Hellenic/react-hexgrid/wiki).
 
+## Coordinate system
+
+This hexagonal grid uses a cubic coordinate system with three coordinates q, r and s.
+![cubic Coordinates](https://raw.githubusercontent.com/Hellenic/react-hexgrid/add-typescript-and-storybook/coordinates.png "Coordinates"). If you want to read about some hexagon mathematics and different coordinate systems maybe have a look at https://www.redblobgames.com/grids/hexagons/
+
 ## Example
 
 ```html
@@ -42,7 +54,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <HexGrid width={1200} height={800} viewBox="-50 -50 100 100">
           {/* Grid with manually inserted hexagons */}
           <Layout size={{ x: 10, y: 10 }} flat={true} spacing={1.1} origin={{ x: 0, y: 0 }}>
@@ -72,12 +84,21 @@ class App extends Component {
   }
 }
 ```
+
 Will look something like this (custom CSS applied):
 ![HexGrid image](https://raw.githubusercontent.com/Hellenic/react-hexgrid/master/react-hexgrid.png "HexGrid")
 
-## Examples
+# Styling
 
-See examples folder.
+There are many options on how to apply css styling. Examples of inline styling, classic css styling and css-in-js styling with emotion are shown in the storybook examples (under /src/stories/).
+
+# Drag and drop
+
+There are examples of drag and drop implementations with native html5 drag and drop api, however these are not yet really well worked out. Feel free to jump in and maybe provide implementations with other drag and drop libraries.
+
+## Examples / Storybook
+
+To run storybook run `npm i` and then `npm run storybook`. Other examples are available in the examples (standalone versions based on create react app).
 
 ### Basics
 
@@ -89,15 +110,11 @@ See examples folder.
 
 1. [pathfinding](https://github.com/Hellenic/react-hexgrid/tree/master/examples/pathfinding) - Pathfinding
 2. [drag & drop](https://github.com/Hellenic/react-hexgrid/tree/master/examples/drag-and-drop) - Drag & drop with two grids
-2. [animations](https://github.com/Hellenic/react-hexgrid/tree/master/examples/animations) - Animations & effects
+3. [animations](https://github.com/Hellenic/react-hexgrid/tree/master/examples/animations) - Animations & effects
 
 ## Testing changes locally
-You can test changes by importing the library directly from a folder:
 
-1. Do changes to the library
-2. On your test project: `npm install /path/to/your/react-hexgrid/ --save`
-3. For easy development, you can `npm link react-hexgrid` on your application
-4. And finally `npm run compile` the react-hexgrid to have the changes in your application
+You can test changes locally by running storybook. You can also use something like npm 7 workspaces to link this library on your local file system side by side with your application.
 
 ## License
 
