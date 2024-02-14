@@ -3,8 +3,8 @@
   "description": "Interactive hexagon grids with React bindings",
   "version": "2.0.1",
   "main": "lib/index.js",
-  "author": "Hellenic",
-  "repository": "superteam-io/react-native-hexgrid",
+  "author": "WillDavenport",
+  "repository": "WillDavenport/react-native-hexgrid",
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
